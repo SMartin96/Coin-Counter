@@ -47,6 +47,11 @@ namespace Coin_Counter
         public Form1()
         {
             InitializeComponent();
+
+            MaximizeBox = false;
+            MinimizeBox = false;
+
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,13 +66,13 @@ namespace Coin_Counter
             label1.Text = Convert.ToString("X " + PennyCount); // Converts the count into string so it can be displayed
 
             PenceTotal += Penny; // Operator to have PenceTotal rise with every value Penny count
-            label10.Text = Convert.ToString(PenceTotal); // Adds to the full total for pennies
+            label20.Text = Convert.ToString(PenceTotal); // Adds to the full total for pennies
 
             FullTotal += PennyCountTotal; // Operator to have FullTotal rise with every value penny count
-            label11.Text = Convert.ToString(FullTotal); // Adds to the full value of pounds and pence
+            label19.Text = Convert.ToString(FullTotal); // Adds to the full value of pounds and pence
 
             Credits = PenceTotal / Convert.ToInt32(CostPerCredit); // Operation to give amount of credits
-            label17.Text = Convert.ToString(Credits); // Converts to string
+            label21.Text = Convert.ToString(Credits); // Converts to string
             }
         }
 
@@ -83,13 +88,13 @@ namespace Coin_Counter
                 label2.Text = Convert.ToString("X " + TwoPennyCount);
 
                 PenceTotal += TwoPenny;
-                label10.Text = Convert.ToString(PenceTotal);
+                label20.Text = Convert.ToString(PenceTotal);
 
                 FullTotal += TwoPennyCountTotal;
-                label11.Text = Convert.ToString(FullTotal);
+                label19.Text = Convert.ToString(FullTotal);
 
                 Credits = PenceTotal / Convert.ToInt32(CostPerCredit);
-                label17.Text = Convert.ToString(Credits);
+                label21.Text = Convert.ToString(Credits);
             }
         }
 
@@ -105,13 +110,13 @@ namespace Coin_Counter
                 label3.Text = Convert.ToString("X " + FivePennyCount);
 
                 PenceTotal += FivePenny;
-                label10.Text = Convert.ToString(PenceTotal);
+                label20.Text = Convert.ToString(PenceTotal);
 
                 FullTotal += FivePennyCountTotal;
-                label11.Text = Convert.ToString(FullTotal);
+                label19.Text = Convert.ToString(FullTotal);
 
                 Credits = PenceTotal / Convert.ToInt32(CostPerCredit);
-                label17.Text = Convert.ToString(Credits);
+                label21.Text = Convert.ToString(Credits);
             }
         }
 
@@ -127,13 +132,13 @@ namespace Coin_Counter
                 label4.Text = Convert.ToString("X " + TenPennyCount);
 
                 PenceTotal += TenPenny;
-                label10.Text = Convert.ToString(PenceTotal);
+                label20.Text = Convert.ToString(PenceTotal);
 
                 FullTotal += TenPennyCountTotal;
-                label11.Text = Convert.ToString(FullTotal);
+                label19.Text = Convert.ToString(FullTotal);
 
                 Credits = PenceTotal / Convert.ToInt32(CostPerCredit);
-                label17.Text = Convert.ToString(Credits);
+                label21.Text = Convert.ToString(Credits);
             }
         }
 
@@ -149,13 +154,13 @@ namespace Coin_Counter
                 label5.Text = Convert.ToString("X " + TwentyPennyCount);
 
                 PenceTotal += TwentyPenny;
-                label10.Text = Convert.ToString(PenceTotal);
+                label20.Text = Convert.ToString(PenceTotal);
 
                 FullTotal += TwentyPennyCountTotal;
-                label11.Text = Convert.ToString(FullTotal);
+                label19.Text = Convert.ToString(FullTotal);
 
                 Credits = PenceTotal / Convert.ToInt32(CostPerCredit);
-                label17.Text = Convert.ToString(Credits);
+                label21.Text = Convert.ToString(Credits);
             }
         }
 
@@ -171,10 +176,13 @@ namespace Coin_Counter
                 label6.Text = Convert.ToString("X " + FiftyPennyCount);
 
                 PenceTotal += FiftyPenny;
-                label10.Text = Convert.ToString(PenceTotal);
+                label20.Text = Convert.ToString(PenceTotal);
 
                 FullTotal += FiftyPennyCountTotal;
-                label11.Text = Convert.ToString(FullTotal);
+                label19.Text = Convert.ToString(FullTotal);
+
+                Credits = PenceTotal / Convert.ToInt32(CostPerCredit);
+                label21.Text = Convert.ToString(Credits);
             }
         }
 
@@ -190,13 +198,13 @@ namespace Coin_Counter
                 label7.Text = Convert.ToString("X " + OnePoundCount);
 
                 PenceTotal += Pound;
-                label10.Text = Convert.ToString(PenceTotal);
+                label20.Text = Convert.ToString(PenceTotal);
 
                 FullTotal += OnePoundCountTotal;
-                label11.Text = Convert.ToString(FullTotal);
+                label19.Text = Convert.ToString(FullTotal);
 
                 Credits = PenceTotal / Convert.ToInt32(CostPerCredit);
-                label17.Text = Convert.ToString(Credits);
+                label21.Text = Convert.ToString(Credits);
             }
         }
 
@@ -212,13 +220,13 @@ namespace Coin_Counter
                 label8.Text = Convert.ToString("X " + TwoPoundCount);
 
                 PenceTotal += TwoPound;
-                label10.Text = Convert.ToString(PenceTotal);
+                label20.Text = Convert.ToString(PenceTotal);
 
                 FullTotal += TwoPoundCountTotal;
-                label11.Text = Convert.ToString(FullTotal);
+                label19.Text = Convert.ToString(FullTotal);
 
                 Credits = PenceTotal / Convert.ToInt32(CostPerCredit);
-                label17.Text = Convert.ToString(Credits);
+                label21.Text = Convert.ToString(Credits);
             }
         }
 
@@ -247,9 +255,9 @@ namespace Coin_Counter
             label6.Text = Convert.ToString("X " + 0);
             label7.Text = Convert.ToString("X " + 0);
             label8.Text = Convert.ToString("X " + 0);
-            label10.Text = Convert.ToString(0);
-            label11.Text = Convert.ToString(0);
-            label17.Text = Convert.ToString(0);
+            label19.Text = Convert.ToString(0.00);
+            label20.Text = Convert.ToString(0);
+            label21.Text = Convert.ToString(0);
             textBox1.ResetText();
 
         }
